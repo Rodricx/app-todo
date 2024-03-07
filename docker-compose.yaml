@@ -1,0 +1,24 @@
+services:
+  dbMysql:
+    image: mysql:8.0
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: toDoDatabase
+    volumes:
+      - todo-data:/var/lib/mysql
+
+  webPhp:
+    image: testephp
+    depends_on: 
+      - dbMysql
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src:/var/www/html
+      
+      
+
+volumes:
+  todo-data:
