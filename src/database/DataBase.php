@@ -4,7 +4,7 @@ namespace Database;
 use Database\Environment\EnvironmentVariable;
 use mysqli;
 
-class DataBase extends EnvironmentVariable
+abstract class DataBase extends EnvironmentVariable
 {
     protected readonly string $host;
     protected readonly string $user;
