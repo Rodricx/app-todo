@@ -20,7 +20,7 @@ session_start();
                 
                 <?php if(isset($_SESSION['msg'])){ echo $_SESSION['msg'];}?>
                 
-                <form action="app/validateLogin.php" method="POST" class="p-4 p-md-5 border rounded-3 bg-light">
+                <form action="controller/LoginController.php" method="POST" class="p-4 p-md-5 border rounded-3 bg-light">
                     <div class="input-group flex-nowrap mb-3">
                         <h1>Login</h1>
                     </div>
